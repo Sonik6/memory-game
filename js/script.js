@@ -96,9 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
    
-    optionOneId.removeEventListener('click', flipCard);
-    optionTwoId.removeEventListener('click', flipCard);
-
+   
     if(cardsChosen[0] === cardsChosen[1]){
       document.querySelector('p').innerHTML= 'You found a match!';
       counterDisplay.innerHTML = 'Moves: ' + ++counter;
@@ -108,8 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
     } else {
-      optionOneId.addEventListener('click', flipCard);
-      optionTwoId.addEventListener('click', flipCard);
       
       cards[optionOneId].setAttribute('src', 'images/icons8-tarot-cards-100.png');
       cards[optionTwoId].setAttribute('src', 'images/icons8-tarot-cards-100.png');
